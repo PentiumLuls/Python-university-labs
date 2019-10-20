@@ -6,6 +6,7 @@ def main():
     f = open("assets/random_numbers.txt", 'r')
 
     lines = f.readlines()
+    lines = list(map(int, lines))
     print("Max element: ", find_max_iterable(iter(lines)))
     print("Min even element: ", find_min_iterable(find_even(lines)))
     print("Max odd element: ", find_max_iterable(find_odd(lines)))
